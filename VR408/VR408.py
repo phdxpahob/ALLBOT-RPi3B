@@ -259,6 +259,46 @@ def spider_turn_left():
     pwm.set_pwm(kneeFrontRight, 0, set_servo_angle(135))
     time.sleep(.03)
     
+def spider_turn_right():
+    pwm.set_pwm(kneeRearRight, 0, set_servo_angle(80))
+    pwm.set_pwm(kneeFrontLeft, 0, set_servo_angle(100))
+    time.sleep(.07)
+    
+    pwm.set_pwm(hipRearRight, 0, set_servo_angle(0))
+    pwm.set_pwm(hipFrontLeft, 0, set_servo_angle(0))
+    time.sleep(.06)
+    
+    pwm.set_pwm(kneeRearRight, 0, set_servo_angle(30))
+    pwm.set_pwm(kneeFrontLeft, 0, set_servo_angle(150))
+    time.sleep(.03)
+    
+    pwm.set_pwm(hipRearRight, 0, set_servo_angle(45))
+    pwm.set_pwm(hipFrontLeft, 0, set_servo_angle(45))
+    time.sleep(.07)
+    
+    pwm.set_pwm(kneeRearRight, 0, set_servo_angle(45))
+    pwm.set_pwm(kneeFrontLeft, 0, set_servo_angle(135))
+    time.sleep(.03)
+    
+    pwm.set_pwm(kneeRearLeft, 0, set_servo_angle(100))
+    pwm.set_pwm(kneeFrontRight, 0, set_servo_angle(80))
+    time.sleep(.07)
+    
+    pwm.set_pwm(hipRearLeft, 0, set_servo_angle(90))
+    pwm.set_pwm(hipFrontRight, 0, set_servo_angle(90))
+    time.sleep(.06)
+    
+    pwm.set_pwm(kneeRearLeft, 0, set_servo_angle(30))
+    pwm.set_pwm(kneeFrontRight, 0, set_servo_angle(150))
+    time.sleep(.05)
+    
+    pwm.set_pwm(hipRearLeft, 0, set_servo_angle(135))
+    pwm.set_pwm(hipFrontRight, 0, set_servo_angle(135))
+    time.sleep(.07)
+    
+    pwm.set_pwm(kneeRearLeft, 0, set_servo_angle(45))
+    pwm.set_pwm(kneeFrontRight, 0, set_servo_angle(135))
+    time.sleep(.03)
     
 # Set frequency to 60hz, good for servos.
 pwm.set_pwm_freq(50)
