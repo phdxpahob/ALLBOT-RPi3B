@@ -224,7 +224,7 @@ def VR204_scared(int shakes, int beeps:
     chirp(beeps, 0)
 
 #--------------------------------------------------------------
-# Initialise the spider robot:
+# Initialise the standing robot:
 VR204_standup()
 
 # Chirp for ready:
