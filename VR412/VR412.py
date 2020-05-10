@@ -106,11 +106,11 @@ ankleFrontRight = WBServo(6, False, 0, 0)
 
 hipRearLeft = WBServo(8, False, 0, 45)
 kneeRearLeft = WBServo(9, False, 0, 10)
-ankleRearLeft = WBServo(10, False, 0, 0)
+ankleRearLeft = WBServo(10, True, 0, 0)
 
 hipRearRight = WBServo(12, True, 0, 45)
 kneeRearRight = WBServo(13, False, 0, 10)
-ankleRearLeft = WBServo(14, True, 0, 0)
+ankleRearRight = WBServo(14, True, 0, 0)
 
 #--------------------------------------------------------------
 def chirp(beeps, speed):
@@ -666,7 +666,7 @@ while True:
     elif action == 12:
         VR412_scared(random.randint(2, 10), random.uniform(.0005, .003))
     elif action == 13:
-        VR412_chirp(random.randint(1, 30), random.uniform(.0001, .0255))
+        chirp(random.randint(1, 30), random.uniform(.0001, .0255))
     elif action == 14:
         VR412_wavefrontright(random.randint(1, 5), random.uniform(.0025, .01))
     elif action == 15:
