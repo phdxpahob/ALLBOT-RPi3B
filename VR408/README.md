@@ -1,4 +1,6 @@
-This is the code for the standard VELLEMAN four-legged robot VR408.
+This is the code for the standard VELLEMAN four-legged robot VR408
+
+![VELLEMAN four-legged robot VR408](http://images.velleman.eu/manuals/allbot/arduino-allbot/04/001.jpg "VR408") 
 
 You might need to configure the pins, depending on the configuration of the legs. This is done in the section after the comment:
 ```
