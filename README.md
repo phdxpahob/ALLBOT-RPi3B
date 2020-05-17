@@ -8,4 +8,6 @@ Tested on Raspberry Pi 3B(+), using the Adafruit 16-Channel 12-bit PWM/Servo Dri
 The scripts require the [Adafruit Python PCA9685 library](https://github.com/adafruit/Adafruit_Python_PCA9685). 
 
 ## Known issuess
-~~Currently there is no way to control the movement speed of the legs.~~ Added new class `WBServo` and `animate()` function, that allows code to be written the same way as using the Arduino ALLBOT-lib. Still holds that depending on the configuration, the movement angles should be corrected. This is now made simpler, because it could be set if the servo is inverted (flipped), and offset angle if the displacement is small. For bigger displacements mechanical tuning is required. Code cleanup and formatting contributions are still welcome!
+- ~~Currently there is no way to control the movement speed of the legs.~~ Added new class `WBServo` and `animate()` function, that allows code to be written the same way as using the Arduino ALLBOT-lib. Still holds that depending on the configuration, the movement angles should be corrected. This is now made simpler, because it could be set if the servo is inverted (flipped), and offset angle if the displacement is small. For bigger displacements mechanical tuning is required. 
+- Timing using `time.sleep` is not as precise as the Arduino `delay()`; also time constants should be lower to mimick the behaivior as in the original Arduino-controlled ALLBOTs. 
+- Code cleanup and formatting contributions are still welcome!
