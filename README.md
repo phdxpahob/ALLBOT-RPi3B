@@ -1,4 +1,4 @@
-# ALLBOT-RPi3B
+# ALLBOT-RPi3B Example scripts
 A set of python scripts for the [Velleman](https://manuals.velleman.eu/category.php?id=85) Robotics [ALLBOTs](https://manuals.velleman.eu/article.php?id=394). Work derived from the [original source code](https://github.com/Velleman/ALLBOT-lib/) for Arduino, ported to python.
 
 ## Hardware requirements:
