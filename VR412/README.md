@@ -1,4 +1,4 @@
-This is the code for the VELLEMAN four-legged three joints robot VR408
+This is the code for the VELLEMAN four-legged three joints robot VR412
 
 ![VELLEMAN four-legged with three joints robot VR408](http://images.velleman.eu/manuals/allbot/arduino-allbot/04/002.jpg "VR412") 
 
