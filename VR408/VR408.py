@@ -591,42 +591,48 @@ print("Ctrl+C to stop...") # The only way to exit...
 
 # Random action infinite loop:
 while True:
-    time.sleep(random.uniform(0.001, 0.02));
-    action = random.randint(0, 17)
+    try:    
+        time.sleep(random.uniform(0.001, 0.02));
+        action = random.randint(0, 17)
+        
+        if action == 0:
+            VR408_leanforward(random.uniform(.001, .0255))
+        elif action == 1:
+            VR408_leanbackward(random.uniform(.001, .0255))
+        elif action == 2:
+            VR408_leanleft(random.uniform(.001, .0255))
+        elif action == 3:
+            VR408_leanright(random.uniform(.001, .0255))
+        elif action == 4:
+            VR408_lookleft(random.uniform(.001, .0255))
+        elif action == 5:
+            VR408_lookright(random.uniform(.001, .0255))
+        elif action == 6:
+            VR408_turnleft(random.randint(1, 5), random.uniform(.001, .0255))
+        elif action == 7:
+            VR408_turnright(random.randint(1, 5), random.uniform(.001, .0255))
+        elif action == 8:
+            VR408_walkforward(random.randint(2, 10), random.uniform(.001, .015))
+        elif action == 9:
+            VR408_walkbackward(random.randint(2, 10), random.uniform(.001, .015))
+        elif action == 10:
+            VR408_walkleft(random.randint(2, 10), random.uniform(.001, .015))
+        elif action == 11:
+            VR408_walkright(random.randint(2, 10), random.uniform(.001, .015))
+        elif action == 12:
+            VR408_scared(random.randint(2, 10), random.uniform(.0005, .003))
+        elif action == 13:
+            chirp(random.randint(1, 30), random.uniform(.0001, .0255))
+        elif action == 14:
+            VR408_wavefrontright(random.randint(1, 5), random.uniform(.0025, .01))
+        elif action == 15:
+            VR408_wavefrontleft(random.randint(1, 5), random.uniform(.0025, .01))
+        elif action == 16:
+            VR408_waverearright(random.randint(1, 5), random.uniform(.0025, .01))
+        elif action == 17:
+            VR408_waverearleft(random.randint(1, 5), random.uniform(.0025, .01))
     
-    if action == 0:
-        VR408_leanforward(random.uniform(.001, .0255))
-    elif action == 1:
-        VR408_leanbackward(random.uniform(.001, .0255))
-    elif action == 2:
-        VR408_leanleft(random.uniform(.001, .0255))
-    elif action == 3:
-        VR408_leanright(random.uniform(.001, .0255))
-    elif action == 4:
-        VR408_lookleft(random.uniform(.001, .0255))
-    elif action == 5:
-        VR408_lookright(random.uniform(.001, .0255))
-    elif action == 6:
-        VR408_turnleft(random.randint(1, 5), random.uniform(.001, .0255))
-    elif action == 7:
-        VR408_turnright(random.randint(1, 5), random.uniform(.001, .0255))
-    elif action == 8:
-        VR408_walkforward(random.randint(2, 10), random.uniform(.001, .015))
-    elif action == 9:
-        VR408_walkbackward(random.randint(2, 10), random.uniform(.001, .015))
-    elif action == 10:
-        VR408_walkleft(random.randint(2, 10), random.uniform(.001, .015))
-    elif action == 11:
-        VR408_walkright(random.randint(2, 10), random.uniform(.001, .015))
-    elif action == 12:
-        VR408_scared(random.randint(2, 10), random.uniform(.0005, .003))
-    elif action == 13:
-        VR408_chirp(random.randint(1, 30), random.uniform(.0001, .0255))
-    elif action == 14:
-        VR408_wavefrontright(random.randint(1, 5), random.uniform(.0025, .01))
-    elif action == 15:
-        VR408_wavefrontleft(random.randint(1, 5), random.uniform(.0025, .01))
-    elif action == 16:
-        VR408_waverearright(random.randint(1, 5), random.uniform(.0025, .01))
-    elif action == 17:
-        VR408_waverearleft(random.randint(1, 5), random.uniform(.0025, .01))
+    except KeyboardInterrupt:
+        print("Exiting...")
+        pwm = Adafruit_PCA9685.PCA9685()
+        break
